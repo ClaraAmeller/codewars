@@ -7,4 +7,4 @@ function isPangram(string) {
     return result.length === 26 ? true : false;
 }
 
-isPangram('The quick brown fox jumps over the laxy dog.'); // True
+isPangram('The quick brown fox jumps over the lazy dog.'); // True
