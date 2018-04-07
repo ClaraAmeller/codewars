@@ -9,6 +9,7 @@
 
 def solution(str)
   result = []
+  return result if str.empty?
   str.split('').each_slice(2).with_index do |(a, b), _i|
     result.push([a, b].join(''))
   end
