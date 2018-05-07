@@ -12,11 +12,7 @@
 # 1634 (4 digits): 1^4 + 6^4 + 3^4 + 4^4 = 1 + 1296 + 81 + 256 = 1634
 
 def narcissistic?(value)
-  sum = 0
-  value.to_s.split('').each do |v|
-    sum += v.to_i**value.to_s.length
-  end
-  value == sum
+  value == value.to_s.chars.map { |v| v.to_i**value.to_s.length }.reduce(:+)
 end
 
 narcissistic?(153)
